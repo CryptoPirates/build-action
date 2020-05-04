@@ -19,4 +19,4 @@ echo "Building image from Dockerfile"
 docker build \
     --build-arg "USERNAME=${INPUT_GITUSERNAME}" \
     --build-arg "ACCESSTOKEN=${INPUT_GITACCESSTOKEN}" \
-    .
+    . || exit 1

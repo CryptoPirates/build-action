@@ -1,0 +1,13 @@
+name: 'Build Image'
+description: Build a container image from a Dockerfile.
+author: Colin Campbell
+inputs:
+  gitUsername:
+    description: The git username to use when cloning dependencies.
+    required: true
+  gitAccessToken:
+    description: The access token associated with the user passed to gitUsername.
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

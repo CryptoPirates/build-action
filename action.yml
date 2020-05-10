@@ -8,6 +8,9 @@ inputs:
   gitAccessToken:
     description: The access token associated with the user passed to gitUsername.
     required: true
+  gitBranch:
+    description: The branch to build off of.
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'

@@ -14,6 +14,7 @@ read -ra ADDR <<< "${GITHUB_REPOSITORY}"
 IDX=${#ADDR[@]}-1
 REPONAME="${ADDR[${IDX}]}"
 cd $REPONAME
+git checkout "${INPUT_GITBRANCH}"
 
 echo "Building image from Dockerfile"
 docker build \
